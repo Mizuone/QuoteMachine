@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+.boxstyling {
+    position: relative;
+    top: 150px;
+    height: 350px;
+    border: 1px solid black;
+    box-shadow: 0 0 3px black;
+}
+#randomquotecontainer {
+    position: relative;
+    top: 50px;
+}
+#randomquotecontainer p, .person {
+    font-family: 'Raleway', sans-serif;
+    line-height: 125%;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.quote {
+    height: 50px;
+}
+.socialicons {
+    position: relative;
+    float: right;
+    top: 100px;
+}
+.addbold {
+    font-weight: bold;
+}
+button {
+    position: relative;
+    height: 2.5em;
+    top: 125px;
+}
