@@ -46,11 +46,27 @@ $(document).ready(function() {
                   person: " - Arnold Schwarzenegger"
                }
         ];
-        $("#showquote").on("click", function() {
-            var quotePosition = Math.floor(Math.random() * (quotecollection.length - 1));
-            $(".quote").text('"' + quotecollection[quotePosition].quote + '"');
-            $(".quote").append('<span class="addbold">' + quotecollection[quotePosition].person + '</span>');
-        });
+        function randomQuote() {
+            var quotePosition = Math.floor(Math.random() * (quotecollection.length - 1)),
+                colorOne = Math.floor(Math.random() * 255),
+                colorTwo = Math.floor(Math.random() * 255),
+                colorThree = Math.floor(Math.random() * 255);
+            $(".quote").css("display", "none");
+            
+            $(".quote").fadeIn("slow", function() {
+                $(this).text('"' + quotecollection[quotePosition].quote + '"').append('<span class="addbold">' +            quotecollection[quotePosition].person + '</span>');
+            });
+            
+            $(".boxstyling").css({
+                "transition": "all 1s ease-in-out",
+                "border": "solid 2px " + "rgba(" + colorOne + ", " + colorTwo + ", " + colorThree + ", " + "1" + ")",
+                "background-color": "rgba(" + colorOne + ", " + colorTwo + ", " + colorThree + ", " + "0.1" + ")"
+            });
+        };
+        setInterval(function() {
+           randomQuote(); 
+        }, 5000);
+        randomQuote();
     };
     QuoteSpace();
 });
