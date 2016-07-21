@@ -3,7 +3,6 @@
     position: relative;
     top: 150px;
     height: 350px;
-    border: 1px solid black;
     box-shadow: 0 0 3px black;
 }
 #randomquotecontainer {
@@ -12,8 +11,10 @@
 }
 #randomquotecontainer p, .person {
     font-family: 'Raleway', sans-serif;
-    line-height: 125%;
-    font-size: 1.5em;
+    font-weight: 300;
+    text-align: left;
+    line-height: 150%;
+    font-size: 1.6em;
     font-style: italic;
 }
 
@@ -22,8 +23,17 @@
 }
 .socialicons {
     position: relative;
-    float: right;
-    top: 100px;
+    top: 135px;
+    text-align: center;
+}
+.socialicons a img{
+    padding: 5px;
+}
+ul.listicons {
+    padding-left: 0px;
+}
+li {
+    display: inline;
 }
 .addbold {
     font-weight: bold;
