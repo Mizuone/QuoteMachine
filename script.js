@@ -52,10 +52,10 @@ $(document).ready(function() {
                 colorTwo = Math.floor(Math.random() * 255),
                 colorThree = Math.floor(Math.random() * 255);
             $(".quote").css("display", "none");
-            
-            $(".quote").fadeIn("slow", function() {
+            $(".quote").fadeOut("slow",function() {
                 $(this).text('"' + quotecollection[quotePosition].quote + '"').append('<span class="addbold">' +            quotecollection[quotePosition].person + '</span>');
             });
+            $(".quote").fadeIn("slow");
             
             $(".boxstyling").css({
                 "transition": "all 1s ease-in-out",
