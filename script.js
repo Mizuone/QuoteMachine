@@ -53,7 +53,7 @@ $(document).ready(function() {
                 colorThree = Math.floor(Math.random() * 255);
             $(".quote").css("display", "none");
             $(".quote").fadeOut("slow",function() {
-                $(this).text('"' + quotecollection[quotePosition].quote + '"').append('<span class="addbold">' +            quotecollection[quotePosition].person + '</span>');
+                $(this).text('"' + quotecollection[quotePosition].quote + '"').append('<br><span class="addbold">' +            quotecollection[quotePosition].person + '</span>');
             });
             $(".quote").fadeIn("slow");
             
